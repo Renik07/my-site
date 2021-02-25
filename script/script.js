@@ -17,12 +17,11 @@ function animateBlocks() {
 			return anime.random(-500, 500);
 		},
 		scale: function() {
-			return anime.random(1, 5);
+			return anime.random(1, 4.5);
 		},
-		easing: 'easeInOutQuad',
-		autoplay: true,
-    duration: 5000,
-		delay: anime.stagger(10),
+		easing: 'easeInOutBack',
+    duration: 4000,
+		delay: anime.stagger(50),
 		complete: animateBlocks
 	});
 }
