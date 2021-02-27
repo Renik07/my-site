@@ -1,3 +1,8 @@
+:root {
+	--top-color: #5680E9;
+	--left-color: #84CEEB;
+	--right-color: #9a7bd3;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -8,15 +13,111 @@ body {
 	position: relative;
 	overflow: hidden;
 	min-height: 100vh;
-	background-color: #0D9EFA;
+	background-color: linear-gradient(to bottom, #f1f4f9, #dff1ff);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+body .color {
+	position: absolute;
+	filter: blur(200px);
+	
+}
+body .color:nth-child(1) {
+	top: -350px;
+	width: 95%;
+	height: 600px;
+	background: var(--top-color);
+}
+
+body .color:nth-child(2) {
+	bottom: -150px;
+	left: -100px;
+	width: 1000px;
+	height: 500px;
+	background: var(--left-color);
+}
+
+body .color:nth-child(3) {
+	bottom: -50px;
+	right: 100px;
+	width: 500px;
+	height: 500px;
+	background: var(--right-color);
+}
+
+.box {
+	position: relative;
+}
+
 .container {
-	height: 80vh;
+	height: 86vh;
 	overflow: scroll;
+	text-align: center;
+}
+
+.square {
+	position: absolute;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1 px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	animation: animate 10s linear infinite;
+	animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate {
+	0%,100% {
+		transform: translateY(-40px);
+	}
+	50% {
+		transform: translateY(40px);
+	}
+}
+.square:nth-child(1) {
+	
+	right: -40px;
+	width: 180px;
+	height: 180px;
+}
+.square:nth-child(2) {
+	top: 500px;
+	left: -100px;
+	width: 200px;
+	height: 200px;
+}
+.square:nth-child(3) {
+	bottom: 50px;
+	right: -60px;
+	width: 80px;
+	height: 80px;
+}
+.square:nth-child(4) {
+	bottom: -80px;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+}
+.square:nth-child(5) {
+	top: -80px;
+	left: 140px;
+	width: 60px;
+	height: 60px;
+}
+.square:nth-child(6) {
+	top: 90%;
+	left: 60%;
+	width: 120px;
+	height: 120px;
+}
+.square:nth-child(7) {
+	top: 20%;
+	left: 40%;
+	width: 160px;
+	height: 160px;
 }
 
 .container::-webkit-scrollbar { 
@@ -34,8 +135,9 @@ body {
 
 .card {
 	position: relative;
-	margin: 20px;
-	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	margin: 15px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 15px;
 	overflow: hidden;
@@ -43,9 +145,8 @@ body {
 	border-left: 1px solid rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(5px);
 }
-
-.content {
-
+.card-body {
+	text-align: left;
 }
 
 .card-img-top {
@@ -54,11 +155,7 @@ body {
   width: 100%;
 }
 
-.card-body {
-	/* overflow: hidden; */
-}
-
 .btn {
-	background-color: #0049F5;
+	background-color: #5680E9   ;
 	border: none;
 }
