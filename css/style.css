@@ -1,4 +1,4 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');:root {
 	--top-color: #5680E9;
 	--left-color: #84CEEB;
 	--right-color: #9a7bd3;
@@ -7,6 +7,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Comfortaa', cursive;
 }
 
 body {
@@ -51,7 +52,7 @@ body .color:nth-child(3) {
 	position: relative;
 }
 
-.container {
+.content {
 	height: 86vh;
 	overflow: scroll;
 	text-align: center;
@@ -120,7 +121,13 @@ body .color:nth-child(3) {
 	height: 160px;
 }
 
-.container::-webkit-scrollbar { 
+.link img {
+	width: 40px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.content::-webkit-scrollbar { 
 	width: 0 !important 
 }
 
@@ -136,7 +143,7 @@ body .color:nth-child(3) {
 .card {
 	position: relative;
 	display: inline-block;
-	margin: 15px;
+	margin: 5px;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 15px;
@@ -147,6 +154,10 @@ body .color:nth-child(3) {
 }
 .card-body {
 	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 188px;
 }
 
 .card-img-top {
@@ -158,4 +169,8 @@ body .color:nth-child(3) {
 .btn {
 	background-color: #5680E9   ;
 	border: none;
+}
+
+.footer {
+	text-align: center;
 }
