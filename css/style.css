@@ -122,10 +122,17 @@ body .color:nth-child(3) {
 	height: 160px;
 }
 
+.link {
+	position: relative;
+	text-decoration: none;
+	z-index: 100;
+}
+
 .link img {
-	width: 40px;
+	width: 50px;
 	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+	
 }
 
 .content::-webkit-scrollbar { 
